@@ -1,7 +1,5 @@
-module Main where
+module Hw1 where
 
-main :: IO ()
-main = putStrLn "Hello World"
 
 -- Exercise 1
 toDigits :: Integer -> [Integer]
@@ -28,6 +26,7 @@ validate n = sumDigits (doubleEveryOther $ toDigits n) `mod` 10 == 0
 -- Exercise 5
 type Peg = String
 type Move = (Peg, Peg)
+
 hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
 hanoi n a b c
     | n <= 0 = []
