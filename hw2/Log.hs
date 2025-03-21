@@ -1,3 +1,5 @@
+-- CIS 194 Homework 2
+
 module Log where
 
 import Control.Applicative
