@@ -46,5 +46,5 @@ cartProd :: [a] -> [b] -> [(a, b)]
 cartProd xs ys = [(x, y) | x <- xs, y <- ys]
 
 sieveSundaram :: Integer -> [Integer]
-sieveSundaram x = (1+) . (2*) <$> filter (`notElem` invalidNums) [1..x]
+sieveSundaram x = (\x -> 2*x + 1) <$> filter (`notElem` invalidNums) [1..x]
   where invalidNums = (\(i, j) -> i + j + 2*i*j) <$> cartProd [1..x] [1..x]
