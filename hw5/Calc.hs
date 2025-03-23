@@ -8,6 +8,7 @@ import qualified ExprT
 import qualified StackVM
 import Parser
 
+
 -- Exercise 1
 eval :: ExprT.ExprT -> Integer
 eval expr = case expr of
